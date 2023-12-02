@@ -3,8 +3,6 @@ import {postApi} from "./postsApi";
 import {PostItem} from "../../widgets/Post/PostItem";
 import style from './Main.module.scss'
 
-
-
 export const Posts: FC = () => {
   const [currentPostStart,setCurrentPostStart]=useState(0)
   const {data:posts, isLoading} =postApi.useFetchAllPostsQuery({limit:7,start:currentPostStart})

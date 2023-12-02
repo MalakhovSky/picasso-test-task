@@ -37,8 +37,11 @@
   "include": [
 
     [
+      "**/*.ts",
+      "**/*.tsx",
+      "src",
       "global.d.ts",
-      "src"
+      "src/**/*"
     ]
   ]
 }

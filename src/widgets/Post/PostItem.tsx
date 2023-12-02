@@ -1,7 +1,7 @@
 import React from "react";
 import {useNavigate} from "react-router";
-import {IPost, postApi} from "../../Pages/Posts/postsApi";
-import style from './PostItem.module.scss'
+import {IPost} from "../../Pages/Posts/postsApi";
+import style from "./PostItem.module.scss"
 import {Button} from "../../shared/button/Button";
 
 type PropsType={
@@ -19,7 +19,7 @@ export const PostItem = ({post}:PropsType) => {
         <div  className={style.postItem_body}>
         {Number(post?.body.length)>100?post?.body.substring(0,100)+'...':post?.body}
         </div>
-        <div  onClick={()=>{navigate(`/posts/${2}`)}} className={style.button}>
+        <div  onClick={()=>{navigate(`/posts/${post?.id}`)}} className={style.button}>
           <Button >
             К посту
           </Button>
