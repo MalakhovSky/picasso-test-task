@@ -1,22 +1,30 @@
 import React from "react";
-import {useNavigate} from "react-router";
-import {IPost} from "../Posts/postsApi";
+import {useNavigate, useParams} from "react-router";
+import {postApi} from "../Posts/postsApi";
+import style from './PostDetails.module.scss'
+import {Button} from "../../shared/button/Button";
 
 
-type PropsType={
-  post?:IPost
-}
+export const PostDetails = () => {
 
-export const PostDetails = ({post}:PropsType) => {
+  const {id} = useParams()
+  const {data:post, isLoading} = postApi.useFetchPostByIdQuery(Number(id));
 
   const navigate=useNavigate()
 
+if(isLoading) return <h1>Loading...</h1>
+
   return (
-      <div >
-        <div>№ {post?.id}</div>
-        <div className='postitem__title'>Title: {post?.title}</div>
-        <div  className='postitem__body'>
-          Body: VGDWD  {Number(post?.body.length)>20?post?.body.substring(0,20)+'...':post?.body}
+      <div className={style.container} >
+        <div className={style.number}>№ {post?.id}</div>
+        <div className={style.postDetails__title}>{post?.title}</div>
+        <div  className={style.postDetails__body}>
+          {post?.body}
+        </div>
+        <div onClick={()=>{navigate('/')}} className={style.button}>
+          <Button>
+            К постам
+          </Button>
         </div>
       </div>
   );
