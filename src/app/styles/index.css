@@ -1,1 +1,10 @@
 @import url('reset.css');
+
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Nunito:wght@200;400;700&family=Poppins:wght@500&family=Work+Sans&display=swap');
+
+
+
+body{
+    background-color: #4b4747;
+    font-family: Crimson Text;
+}

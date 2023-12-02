@@ -1,6 +1,7 @@
 import {FC, useEffect, useState} from "react";
 import {postApi} from "./postsApi";
 import {PostItem} from "../../widgets/Post/PostItem";
+import style from './Main.module.scss'
 
 
 
@@ -45,10 +46,9 @@ export const Posts: FC = () => {
       window.scrollTo(0,(e.target.documentElement.scrollHeight + e.target.documentElement.scrollTop));
     }
   }
-  console.log(posts,'POSTS')
   return (
       <div>
-        <div className='post__list'>
+        <div className={style.container}>
           {posts?.map(post=><PostItem key={post.id} post={post}/>)}
         </div>
         {isLoading&&<div>Загрузка данных</div>}

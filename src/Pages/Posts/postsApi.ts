@@ -29,3 +29,4 @@ export const postApi=createApi({
   })
 })
 
+// export const {useFetchAllPostsQuery,useFetchPostByIdQuery} = postApi

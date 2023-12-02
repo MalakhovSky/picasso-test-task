@@ -4,9 +4,9 @@ import './app/styles/index.css';
 import {RouterProvider} from "react-router";
 import {router} from "./app/router/router";
 
-import {setupStore} from "./app/store";
+import {setupStore} from "./app/redux/store";
 import {Provider} from "react-redux";
-import {Posts} from "./Pages/Posts/Posts";
+
 
 
 const store = setupStore()

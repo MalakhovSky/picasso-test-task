@@ -1,4 +1,32 @@
 .container{
-  width: 400px;
-  height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  height: 200px;
+  margin-top: 100px;
+  align-items: center;
+
+
+  background-color: #dcd4a6;
+  border-radius: 20px;
+  .number{
+    align-self: start;
+    margin: 10px;
+    font-size: 20px;
+  }
+  .postItem__title{
+    font-size: 24px;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .postItem_body{
+    margin: 15px;
+    font-size: 20px;
+  }
+  .button{
+    align-self: end;
+    margin-right: 20px;
+  }
+
 }

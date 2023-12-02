@@ -1,5 +1,5 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {postApi} from "../Pages/Posts/postsApi";
+import {postApi} from "../../Pages/Posts/postsApi";
 
 const rootReducer= combineReducers({
   [postApi.reducerPath]:postApi.reducer
@@ -8,6 +8,6 @@ const rootReducer= combineReducers({
 export const setupStore=()=> {
   return configureStore({
     reducer: rootReducer,
-    middleware: (getDefaultMidleware) => getDefaultMidleware().concat(postApi.middleware)
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(postApi.middleware)
   })
 }
