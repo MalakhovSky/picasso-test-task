@@ -1,3 +1,18 @@
+Тстовое задание для компании ПИКАССО.
+
+Задание:
+Используя React, RTK Query, React Router DOM 6, JSON Placeholder и FSD-архитектуру сделайте простое приложение:
+1. главная страница - список постов (бесконечный скролл + виртуализация)
+2. каждый пост в списке - это строка: номер + заголовок + описание обрезанное "...", если не влезает + кнопка "просмотр"
+3. кнопка "просмотр" ведет на отдельный роут, где отображается полная информация о посте в произвольной форме + кнопка "назад"
+
+
+Страница со списком постов и бесконечным скроллом.
+![Иллюстрация к проекту](https://github.com/MalakhovSky/picasso-test-task/blob/main/Posts.PNG)
+
+Страница с выбранным постом.
+![Иллюстрация к проекту](https://github.com/MalakhovSky/picasso-test-task/blob/main/Post.PNG)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
