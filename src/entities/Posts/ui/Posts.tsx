@@ -1,7 +1,7 @@
 import {FC, useEffect, useState} from "react";
-import {postApi} from "./postsApi";
-import {PostItem} from "../../widgets/Post/PostItem";
-import style from './Main.module.scss'
+import {postApi} from "../api/postsApi";
+import {PostItem} from "../../../widgets/Post/ui/PostItem";
+import style from './Posts.module.scss'
 
 export const Posts: FC = () => {
   const [currentPostStart,setCurrentPostStart]=useState(0)
